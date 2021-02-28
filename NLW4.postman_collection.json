@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "fb943f60-ea85-42a3-8809-25e7882b65a9",
+		"name": "NLW4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NPS",
+			"item": [
+				{
+					"name": "calculate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/nps/844657f8-5918-49f2-98bb-832c753f739f",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"nps",
+								"844657f8-5918-49f2-98bb-832c753f739f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Send",
+			"item": [
+				{
+					"name": "send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"andresaimonsantos@email.com\",\n    \"survey_id\": \"844657f8-5918-49f2-98bb-832c753f739f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/sendMail",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"sendMail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Surveys",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Queremos a sua opinião!\",\n    \"description\": \"De 0 a 10, quanto você recomendaria a Rocketseat?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/surveys",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3333/surveys",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Andre Saimon Santos Sousa\",\n    \"email\": \"andresaimonsantossousa@email.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"users"
+							]
+						},
+						"description": "create"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
